@@ -1,13 +1,11 @@
-namespace NoteCodeApi.Models
+namespace NoteCodeApi.Dto
 {
-    public class NoteUser
+    public class AddNoteDto
     {
-        public int Id { get; set; }
         public int UserId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public string Code { get; set; }
 
-        // public Users User { get; set; }
     }
 }

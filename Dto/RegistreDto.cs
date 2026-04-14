@@ -1,4 +1,4 @@
-namespace NoteCodeApi.Models
+namespace NoteCodeApi.Dto
 {
     public class RegisterDto
     {
