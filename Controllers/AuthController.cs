@@ -16,9 +16,23 @@ namespace NoteCodeApi.Controllers
             _context = context;
         }
 
-        [HttpPost("sing_up")]
-        public IActionResult Register(RegisterDto dto)
+        [HttpPost("register")]
+        public IActionResult Register([FromBody] RegisterDto dto)
         {
+            if (dto == null || string.IsNullOrEmpty(dto.Password))
+                return BadRequest("Invalid data");
+
+            var userExist = _context.Users
+                .FirstOrDefault(u => u.Username == dto.Username || u.Email == dto.Email);
+
+            if (userExist != null)
+            {
+                return BadRequest(new
+                {
+                    message = "Username or Email already exists"
+                });
+            }
+
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(dto.Password);
 
             var user = new Users
@@ -29,15 +43,18 @@ namespace NoteCodeApi.Controllers
                 Is_active = dto.Is_activate
             };
 
-
             _context.Users.Add(user);
             _context.SaveChanges();
 
-            return Ok(new { message = "User created successfully" });
+            return Ok(new
+            {
+                message = "User created successfully",
+                userId = user.Id
+            });
         }
 
-        [HttpPost("sing_in")]
-        public IActionResult SingIn(LoginDto dto)
+        [HttpPost("sign_in")]
+        public IActionResult SignIn([FromBody] LoginDto dto)
         {
             var user = _context.Users.FirstOrDefault(u => u.Username == dto.UserName);
 

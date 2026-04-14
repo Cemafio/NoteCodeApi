@@ -14,6 +14,12 @@ builder.Services.AddDbContext<NoteCodeDb>(options =>
         builder.Configuration.GetConnectionString("baseConnection")  
     )
 );
+//Authorized flutter o rother framework to connect with .net API
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowAll",
+        policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 
 //Add controller
 builder.Services.AddControllers();
@@ -31,5 +37,6 @@ app.UseHttpsRedirection();
 
 //Activation controller
 app.MapControllers();
+app.UseCors("AllowAll");
 
 app.Run();
