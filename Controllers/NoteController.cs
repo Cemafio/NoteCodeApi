@@ -42,7 +42,7 @@ namespace NoteCodeApi.Controllers
             var note = db.NoteUsers.Find(id);
 
             if (note == null)
-                return NotFound("Note introuvable");
+                return NotFound(new {message = "Note introuvable"});
 
             if (!string.IsNullOrEmpty(dto.Title))
                 note.Title = dto.Title;
@@ -93,10 +93,20 @@ namespace NoteCodeApi.Controllers
         }
 
         [HttpGet("ListForUser/{userId}")]
-        public IActionResult listForOneUser(int userId)
+        public IActionResult ListForOneUser(int userId)
         {
             var list = db.NoteUsers
                 .Where(n => n.UserId == userId)
+                .ToList();
+
+            return Ok(list);
+        }
+
+        [HttpGet("oneNoteUser/{noteId}")]
+        public IActionResult OneNoteUser(int noteId)
+        {
+            var list = db.NoteUsers
+                .Where(n => n.Id == noteId)
                 .ToList();
 
             return Ok(list);

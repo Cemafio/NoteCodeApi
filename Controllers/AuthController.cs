@@ -59,12 +59,12 @@ namespace NoteCodeApi.Controllers
             var user = _context.Users.FirstOrDefault(u => u.Username == dto.UserName);
 
             if (user == null)
-                return Unauthorized();
+                return Unauthorized(new{ message = "Incorrect name !" });
 
             bool isValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash);
 
             if (!isValid)
-                return Unauthorized();
+                return Unauthorized(new{ message = "Incorrect password !" });
             
             return Ok(new
             {
