@@ -65,7 +65,12 @@ namespace NoteCodeApi.Controllers
 
             if (!isValid)
                 return Unauthorized(new{ message = "Incorrect password !" });
-            
+
+            if (dto.Is_activate == false || dto.Is_activate == true)
+            {
+                user.Is_active = dto.Is_activate;
+            }
+            _context.SaveChanges();
             return Ok(new
             {
                 message = "Login successful",

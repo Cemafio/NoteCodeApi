@@ -55,6 +55,34 @@ namespace NoteCodeApi.Migrations
                     b.ToTable("NoteUsers");
                 });
 
+            modelBuilder.Entity("NoteCodeApi.Models.TaskUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IS_completed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("TaskName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("UsersId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsersId");
+
+                    b.ToTable("TaskUsers");
+                });
+
             modelBuilder.Entity("NoteCodeApi.Models.Users", b =>
                 {
                     b.Property<int>("Id")
@@ -90,9 +118,18 @@ namespace NoteCodeApi.Migrations
                         .HasForeignKey("UsersId");
                 });
 
+            modelBuilder.Entity("NoteCodeApi.Models.TaskUser", b =>
+                {
+                    b.HasOne("NoteCodeApi.Models.Users", null)
+                        .WithMany("Tasks")
+                        .HasForeignKey("UsersId");
+                });
+
             modelBuilder.Entity("NoteCodeApi.Models.Users", b =>
                 {
                     b.Navigation("Notes");
+
+                    b.Navigation("Tasks");
                 });
 #pragma warning restore 612, 618
         }

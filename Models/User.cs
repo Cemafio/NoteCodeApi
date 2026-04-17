@@ -11,5 +11,6 @@ namespace NoteCodeApi.Models
         public bool Is_active { get; set; }
 
         public List<NoteUser> Notes { get; set; }
+        public List<TaskUser> Tasks { get; set; }
     }
 }

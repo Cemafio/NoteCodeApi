@@ -10,5 +10,6 @@ namespace NoteCodeApi.Data
 
         public DbSet<Users> Users { get; set; }
         public DbSet<NoteUser> NoteUsers { get; set; }
+        public DbSet<TaskUser> TaskUsers {get; set;}
     }
 }
