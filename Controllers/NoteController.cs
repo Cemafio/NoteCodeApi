@@ -68,14 +68,18 @@ namespace NoteCodeApi.Controllers
             var note = db.NoteUsers.Find(id);
 
             if (note == null)
-                return NotFound("Note introuvable");
+                return NotFound(
+                    new{
+                        message = "Note notefound"
+                    }
+                );
 
             db.NoteUsers.Remove(note);
             db.SaveChanges();
 
             return Ok(new
             {
-                message = "Note supprimée"
+                message = "Note deleted"
             });
         }
 

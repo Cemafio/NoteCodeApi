@@ -63,7 +63,7 @@ namespace NoteCodeApi.Controllers
             var task = _db.TaskUsers.Find(id);
 
             if (task == null)
-                return NotFound("Note introuvable");
+                return NotFound("Task not found !");
 
             _db.TaskUsers.Remove(task);
             _db.SaveChanges();
