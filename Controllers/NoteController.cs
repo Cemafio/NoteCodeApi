@@ -47,11 +47,11 @@ namespace NoteCodeApi.Controllers
             if (!string.IsNullOrEmpty(dto.Title))
                 note.Title = dto.Title;
 
-            if (!string.IsNullOrEmpty(dto.Content))
-                note.Content = dto.Content;
+            // if (!string.IsNullOrEmpty(dto.Content))
+            note.Content = dto.Content;
 
-            if (!string.IsNullOrEmpty(dto.Code))
-                note.Code = dto.Code;
+            // if (!string.IsNullOrEmpty(dto.Code))
+            note.Code = dto.Code;
 
             db.SaveChanges();
 
