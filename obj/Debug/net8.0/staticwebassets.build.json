@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "mYELBFsalxCn/XgVOJYnE9avbC8bRKG0sBsKQCVRBX8=",
+  "Hash": "6G1QAeEFUmkZkOzuqvCeL23TIKwkJLcwZaMzIbsDCn4=",
   "Source": "NoteCodeApi",
   "BasePath": "_content/NoteCodeApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "NoteCodeApi/wwwroot",
+      "Source": "NoteCodeApi",
+      "ContentRoot": "/home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/wwwroot/",
+      "BasePath": "_content/NoteCodeApi",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

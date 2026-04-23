@@ -106,3 +106,4 @@
 /home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/obj/Debug/net8.0/NoteCodeApi.csproj.CopyComplete
 /home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/bin/Debug/net8.0/BCrypt.Net-Next.dll
 /home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/obj/Debug/net8.0/NoteCodeApi.sourcelink.json
+/home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/bin/Debug/net8.0/NoteCodeApi.staticwebassets.runtime.json

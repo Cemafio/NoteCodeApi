@@ -49,7 +49,7 @@ namespace NoteCodeApi.Controllers
             return Ok(new
             {
                 message = "User created successfully",
-                userId = user.Id
+                userId = user.Id,
             });
         }
 
@@ -75,7 +75,9 @@ namespace NoteCodeApi.Controllers
             {
                 message = "Login successful",
                 userId = user.Id,
-                username = user.Username
+                username = user.Username,
+                userEmail = user.Email,
+                userProfil = user.ImageUrl,
             });
         }
     }

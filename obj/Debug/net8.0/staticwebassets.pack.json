@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/wwwroot/uploads/fd551b5d-386c-4d54-abd4-fef172864485.jpg",
+      "PackagePath": "staticwebassets/uploads/fd551b5d-386c-4d54-abd4-fef172864485.jpg"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.NoteCodeApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.NoteCodeApi.props",
+      "PackagePath": "build\\NoteCodeApi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.NoteCodeApi.props",
+      "PackagePath": "buildMultiTargeting\\NoteCodeApi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.NoteCodeApi.props",
+      "PackagePath": "buildTransitive\\NoteCodeApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

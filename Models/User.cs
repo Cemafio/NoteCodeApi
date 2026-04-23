@@ -9,6 +9,7 @@ namespace NoteCodeApi.Models
         public string Email { get; set; }
         public string PasswordHash { get; set; }
         public bool Is_active { get; set; }
+        public string? ImageUrl { get; set;}
 
         public List<NoteUser> Notes { get; set; }
         public List<TaskUser> Tasks { get; set; }

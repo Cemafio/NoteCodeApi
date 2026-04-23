@@ -39,6 +39,56 @@ namespace NoteCodeApi.Controllers
             });
         }
 
+        [HttpPost("uploadProfile/{id}")]
+        public async Task<IActionResult> UploadProfileImage(int id, IFormFile file)
+        {
+            var user = db.Users.Find(id);
+            if (user == null)
+                return NotFound("User not found");
+
+            if (file == null || file.Length == 0)
+                return BadRequest("No file");
+
+            // 🔒 sécurité
+            if (!file.ContentType.StartsWith("image/"))
+                return BadRequest("Invalid file type");
+            
+            // 🔥 crée le dossier si inexistant
+            if (!Directory.Exists("wwwroot/uploads"))
+            {
+                Directory.CreateDirectory("wwwroot/uploads");
+            }
+            
+            if (!string.IsNullOrEmpty(user.ImageUrl))
+            {
+                var oldPath = Path.Combine("wwwroot/uploads", Path.GetFileName(user.ImageUrl));
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+            }
+
+            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+            var path = Path.Combine("wwwroot/uploads", fileName);
+
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            // 🔥 url accessible
+            var imageUrl = $"{Request.Scheme}://{Request.Host}/uploads/{fileName}";
+
+            user.ImageUrl = imageUrl;
+            db.SaveChanges();
+
+            return Ok(new
+            {
+                message = "Image uploaded",
+                imageUrl = imageUrl
+            });
+        }
+
         [HttpDelete("Delete/{id}")]
         public IActionResult Delete(int id)
         {

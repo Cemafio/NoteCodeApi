@@ -38,5 +38,6 @@ app.UseHttpsRedirection();
 //Activation controller
 app.MapControllers();
 app.UseCors("AllowAll");
+app.UseStaticFiles();
 
 app.Run();
