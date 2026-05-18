@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cG0Xxk5dy+/tbCNy3ucxGKu+iJ0SEoZV0Ilf3Snsxlon06dF4oER0iQciH2kBTJSnE92p8dgM3AVIuGC6tmATw==",
+  "dgSpecHash": "JKMNJ//uUi57CQlD77UO5RbauTm0Rhfm5xZNjpiA/4YJmYo1usM29XPOHVc5P3wsyHLlRP7eAyGHCKmignYzfQ==",
   "success": true,
-  "projectFilePath": "/home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/NoteCodeApi.csproj",
+  "projectFilePath": "/home/cesar/Etude/Code/Nokou/NoteCodeApi/NoteCodeApi.csproj",
   "expectedPackageFiles": [
     "/home/cesar/.nuget/packages/bcrypt.net-next/4.1.0/bcrypt.net-next.4.1.0.nupkg.sha512",
     "/home/cesar/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

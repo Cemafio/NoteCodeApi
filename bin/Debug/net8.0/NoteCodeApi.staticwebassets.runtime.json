@@ -1,1 +1,1 @@
-{"ContentRoots":["/home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/wwwroot/"],"Root":{"Children":null,"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}
+{"ContentRoots":["/home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/wwwroot/"],"Root":{"Children":{"uploads":{"Children":{"8e44c7c2-9d64-45f0-bda8-91e710f0d983.jpg":{"Children":null,"Asset":{"ContentRootIndex":0,"SubPath":"uploads/8e44c7c2-9d64-45f0-bda8-91e710f0d983.jpg"},"Patterns":null}},"Asset":null,"Patterns":null}},"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}

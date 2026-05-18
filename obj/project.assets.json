@@ -2813,11 +2813,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/NoteCodeApi.csproj",
+      "projectUniqueName": "/home/cesar/Etude/Code/Nokou/NoteCodeApi/NoteCodeApi.csproj",
       "projectName": "NoteCodeApi",
-      "projectPath": "/home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/NoteCodeApi.csproj",
+      "projectPath": "/home/cesar/Etude/Code/Nokou/NoteCodeApi/NoteCodeApi.csproj",
       "packagesPath": "/home/cesar/.nuget/packages/",
-      "outputPath": "/home/cesar/Etude/Code/NoteCode_app/NoteCodeApi/obj/",
+      "outputPath": "/home/cesar/Etude/Code/Nokou/NoteCodeApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/cesar/.nuget/NuGet/NuGet.Config"
