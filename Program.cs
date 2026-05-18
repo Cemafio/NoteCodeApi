@@ -25,8 +25,7 @@ builder.Services.AddCors(options => {
 builder.Services.AddControllers();
 
 
-builder.WebHost.UseUrls("http://0.0.0.0:" + Environment.GetEnvironmentVariable("PORT"));
-
+builder.WebHost.UseUrls("http://0.0.0.0:8080");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
