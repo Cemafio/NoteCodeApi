@@ -25,7 +25,6 @@ builder.Services.AddCors(options => {
 builder.Services.AddControllers();
 
 
-builder.WebHost.UseUrls("http://0.0.0.0:8080");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -41,5 +40,7 @@ app.UseHttpsRedirection();
 app.MapControllers();
 app.UseCors("AllowAll");
 app.UseStaticFiles();
+app.Urls.Add("http://0.0.0.0:8080");
+
 
 app.Run();
