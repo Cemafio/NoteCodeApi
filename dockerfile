@@ -20,4 +20,4 @@ EXPOSE 8080
 
 ENV ASPNETCORE_URLS=http://+:8080
 
-ENTRYPOINT ["dotnet", "NoteCodeApi.dll"] 
+ENTRYPOINT ["dotnet", "NoteCodeApi.dll"]
